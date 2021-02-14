@@ -1,0 +1,26 @@
+{
+  "name": "github_jobs_api",
+  "version": "1.0.0",
+  "description": "fetch github jobs api using axios and fast retrieve It laster using redis",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mouhsineelachbi/github_jobs_redis_caching.git"
+  },
+  "keywords": [
+    "redis",
+    "in-memory",
+    "github-jobs",
+    "github-jobs-api",
+    "axios"
+  ],
+  "author": "Mouhsine Elachbi",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/mouhsineelachbi/github_jobs_redis_caching/issues"
+  },
+  "homepage": "https://github.com/mouhsineelachbi/github_jobs_redis_caching#readme"
+}
