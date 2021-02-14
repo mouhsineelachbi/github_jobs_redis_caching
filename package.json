@@ -4,7 +4,7 @@
   "description": "fetch github jobs api using axios and fast retrieve It laster using redis",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,13 @@
   "bugs": {
     "url": "https://github.com/mouhsineelachbi/github_jobs_redis_caching/issues"
   },
-  "homepage": "https://github.com/mouhsineelachbi/github_jobs_redis_caching#readme"
+  "homepage": "https://github.com/mouhsineelachbi/github_jobs_redis_caching#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "redis": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
 }
