@@ -1,5 +1,5 @@
-# github jobs redis caching
-backend system implementation that fetch github jobs api and send them back
+# Github Jobs redis caching
+Backend system implementation that fetch github jobs api and send them back
 
 ---
 ## Requirements
