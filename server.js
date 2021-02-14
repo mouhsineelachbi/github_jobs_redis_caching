@@ -1,16 +1,32 @@
 const express = require('express');
 const redis = require('redis');
 const axios = require('axios');
-const   app = express();
+const app = express();
+
+const redisPort = 6379
+const client = redis.createClient(redisPort);
 
 
 app.get("/jobs", async (req, res) => {
     const searchTerm = req.query.search;
     try {
-        const jobs = await axios.get(`https://jobs.github.com/positions.json?search=${searchTerm}`);
-        res.status(200).send({
-            jobs: jobs.data,
-        });	
+        client.get(searchTerm, async (err, jobs) => {
+            if (err) throw err;
+    
+            if (jobs) {
+                res.status(200).send({
+                    jobs: JSON.parse(jobs),
+                    message: "data retrieved from the cache"
+                });
+            } else {
+                const jobs = await axios.get(`https://jobs.github.com/positions.json?search=${searchTerm}`);
+                client.setex(searchTerm, 600, JSON.stringify(jobs.data));
+                res.status(200).send({
+                    jobs: jobs.data,
+                    message: "cache miss"
+                });
+            }
+        });
     } catch(err) {
         res.status(500).send({message: err.message});
     }
