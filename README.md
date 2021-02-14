@@ -44,9 +44,11 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
 
 ## Install
 
-    $ git clone https://github.com/YOUR_USERNAME/PROJECT_TITLE
-    $ cd PROJECT_TITLE
+    $ git clone https://github.com/mouhsineelachbi/github_jobs_redis_caching.git
+    $ cd github_jobs_redis_caching
     $ yarn install
+    Or
+    $ npm install
 
 ## Configure app
 
@@ -59,7 +61,11 @@ Open `a/nice/path/to/a.file` then edit it with your settings. You will need:
 ## Running the project
 
     $ yarn start
+    Or
+    $ npm start
 
 ## Simple build for production
 
     $ yarn build
+    Or
+    $ npm build
