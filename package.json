@@ -4,7 +4,7 @@
   "description": "fetch github jobs api using axios and fast retrieve It laster using redis",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node --trace-warnings server.js"
   },
   "repository": {
     "type": "git",
